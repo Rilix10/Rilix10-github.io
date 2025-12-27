@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+/*flexbox*/
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.box-item {
+	background-color: #ffffff;
+	padding: 10px 10px;
+	border: solid #C9A253;
+	border-width: 1px;
+	width: 260px;
+	margin: 10px 10px;
+}
+
+.box-item:hover {
+	background-color: #C9A253;
+	opacity: 0.7;
+}
+
+/*introduce*/
+.introduce-outer {
+	display: flex; 
+	align-items: flex-start; 
+}
+.introduce-outer .image {
+	position: relative;
+	overflow: hidden;
+}
+.profile-right {
+	margin-left: 15px;
+	width: 550px;
+	
+}
+
+/*プロフィールの基本情報*/
+.profile-list dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem; 
+    margin-top: 1rem;
+}
+
+.profile-list dt {
+    font-weight: bold;
+    color: #555;
+    text-align: right; 
+    padding-right: 1rem;
+    border-right: 1px solid #ddd; 
+}
+
+.profile-list dd {
+    margin: 0;
+    text-align: left;
+}
+
+	
+/*フォント*/
+.member_font {
+	font-family: "M PLUS 1p", sans-serif;
+	font-weight: 800;
+	font-style: normal;
+	font-size: 25px;
+	color: #4B5D43;
+}
+.member_font {
+	line-height: 1.0;
+	margin:-1px;
+}	
+
+/*ケミ紹介*/
+.chemi-card {
+	border: 1px solid #B08D57;
+	border-radius: 8px; 
+	margin-bottom: 1rem;
+	background-color: #fff;
+	overflow: hidden; 
+}
+
+.chemi-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 1.5rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #4B5D43;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+.chemi-title:hover {
+	background-color: #fffbe6; 
+}
+
+.chemi-arrow {
+	transition: transform 0.3s;
+}
+
+.toggle {
+	display: none;
+}
+
+.toggle:checked ~ .more_wrap {
+	display: block;
+}
+.toggle:checked + .chemi-title .chemi-arrow {
+	transform: rotate(180deg);
+}
+
+/* 詳細コンテンツのスタイル */
+.chemi-content {
+	display: flex;
+	align-items: center;
+	padding: 0 1.5rem 1.5rem 1.5rem;
+	gap: 1.5rem;
+	border-top: 1px solid #B08D57;
+}
+.chemi-content img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 8px;
+}
+.chemi-text p {
+	margin: 0;
+}
+.chemi-video-link {
+	display: inline-block;
+	margin-top: 1rem;
+	padding: 0.5rem 1rem;
+	background-color: #1c515c;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	font-size: 0.9rem;
+}
+.chemi-video-link:hover {
+	opacity: 0.8;
+}
+
+/* 「テーマ別」などの小見出し */
+.theme-title {
+	font-size: 1.3rem;
+	color: #4B5D43;
+	margin-top: 2rem;
+	border-bottom: 1px dashed #B08D57;
+}
+
+.filter-controls {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5rem;
+	margin-bottom: 2rem;
+}
+
+.filter-btn {
+	padding: 0.5rem 1rem;
+	border: none;
+	background-color: #ffffff;
+	color: #333333;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.filter-btn.active {
+	background-color: #AD8A4D;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+}
